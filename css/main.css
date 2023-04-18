@@ -1,0 +1,7 @@
+.hangman img{
+    width: 80%;
+}
+
+.hangman__parts{
+    display: none;
+}
