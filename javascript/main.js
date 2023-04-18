@@ -114,11 +114,16 @@ const wordToGuessArray = wordToGuess.split('');
 //ook vervangt je de string naaar een array om zo de plaats van de letters te bepalen 
 const start = document.getElementById('input');
 const hangman = document.getElementById('hangman');
+const refresh = document.getElementById('refresh');
 //hierbij haal je informatie op van de site om deze later in het programma aantepassen 
 for(let j = 0; j < wordToGuess.length; j++ ){
     solution.push('');
 }
 //dit genereed de solution array om je woord mee te makken 
+refresh.addEventListener("click", function(){
+    location.reload();
+})
+//dit is om het spel opnieuw te spellen
 start.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
       input = document.getElementById('input').value;
