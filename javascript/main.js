@@ -19,7 +19,85 @@ const words = [
     "Quandary",
     "Diversity",
     "Pinstrip",
-    "Spirited"
+    "Spirited",
+    "Ambrosia",
+    "Thriving",
+    "Integrity",
+    "Jovially",
+    "Converge",
+    "Lavender",
+    "Abrogate",
+    "Scathing",
+    "Satchels",
+    "Artifice",
+    "Authenticate",
+    "Eucalypt",
+    "Luminary",
+    "Forestry",
+    "Discordant",
+    "Radiance",
+    "Equipped",
+    "Impunity",
+    "Torridly",
+    "Debility",
+    "Parchment",
+    "Ancestor",
+    "Euphoria",
+    "Squeezed",
+    "Addicted",
+    "Inscribe",
+    "Scarcefy",
+    "Reproach",
+    "Amalgams",
+    "Adversity",
+    "Dexterity",
+    "Malinger",
+    "Definite",
+    "Juxtapose",
+    "Cravings",
+    "Pugilist",
+    "Conquest",
+    "Prophesy",
+    "Latitude",
+    "Obligate",
+    "Marauder",
+    "Tantamount",
+    "Tropical",
+    "Eclectic",
+    "Gregarious",
+    "Infernal",
+    "Lullaby",
+    "Mentally",
+    "Outspoken",
+    "Profound",
+    "Sapphire",
+    "Sporadic",
+    "Ultimatum",
+    "Zestfully",
+    "Abhorrent",
+    "Asymmetry",
+    "Blossoms",
+    "Coalesce",
+    "Demolish",
+    "Fledging",
+    "Hydrangea",
+    "Immerse",
+    "Liberate",
+    "Nonpluss",
+    "Opulence",
+    "Parsnips",
+    "Reclusive",
+    "Succinct",
+    "Talisman",
+    "Universe",
+    "Windsurf",
+    "Adherence",
+    "Ballroom",
+    "Cavalier",
+    "Decadent",
+    "Enshrine",
+    "Foothill",
+    "Heritage"
   ];
 // dit zijn de mogelijke woorden die geraden kunnen worden 
 let place;
@@ -35,15 +113,7 @@ const wordToGuessArray = wordToGuess.split('');
 //dit zorgt er voor dat er eeb random woord gekozen word uit de array en dat dit naar kleine leters omgezet wordt
 //ook vervangt je de string naaar een array om zo de plaats van de letters te bepalen 
 const start = document.getElementById('input');
-const first = document.getElementById('hangman1');
-const second = document.getElementById('hangman2');
-const third = document.getElementById('hangman3');
-const fourth = document.getElementById('hangman4');
-const fifth = document.getElementById('hangman5');
-const sixth = document.getElementById('hangman6');
-const seventh = document.getElementById('hangman7');
-const eighth = document.getElementById('hangman8');
-const ninth = document.getElementById('hangman9');
+const hangman = document.getElementById('hangman');
 //hierbij haal je informatie op van de site om deze later in het programma aantepassen 
 for(let j = 0; j < wordToGuess.length; j++ ){
     solution.push('');
@@ -66,51 +136,43 @@ function playGame(){
         if(wordToGuessArray[i] == input){
             place = i;
             solution[place] = input;
-        }else if(wordToGuessArray.includes(input)){
-            console.log('juist')
-        }else{
-            foutChecker = foutChecker+1;
         }
+    }
 //hierbij wordt gekeken of de letter aanwezig is in het te raden woord en als het juist is ingevuld 
+    if(!wordToGuessArray.includes(input)){
+     foutChecker = foutChecker+1;
+    }  
 //en bij een fout wordt er een foutchecker geincrimenteerd om het aantal pogingen te beperken
+console.log(hangman)
+        if(foutChecker == 1){
+            hangman.setAttribute('src', 'img/1.png');
+        }
+        if(foutChecker == 2){
+            hangman.setAttribute('src', 'img/2.png');
+        }
+        if(foutChecker == 3){
+            hangman.setAttribute('src', 'img/3.png');
+        }
+        if(foutChecker == 4){
+            hangman.setAttribute('src', 'img/4.png');
+        }
+        if(foutChecker == 5){
+            hangman.setAttribute('src', 'img/5.png');
+        }
+        if(foutChecker == 6){
+            hangman.setAttribute('src', 'img/6.png');
+        }
+        if(foutChecker == 7){
+            hangman.setAttribute('src', 'img/7.png');
+        }
         if(foutChecker == 8){
-            first.style.display = 'block';
+            hangman.setAttribute('src', 'img/8.png');
         }
-        if(foutChecker == 16){
-            first.style.display = 'none';
-            second.style.display = 'block';
-        }
-        if(foutChecker == 24){
-            second.style.display = 'none';
-            third.style.display = 'block'
-        }
-        if(foutChecker == 32){
-            third.style.display = 'none';
-            fourth.style.display = 'block'
-        }
-        if(foutChecker == 40){
-            fourth.style.display = 'none';
-            fifth.style.display = 'block'
-        }
-        if(foutChecker == 48){
-            fifth.style.display = 'none';
-            sixth.style.display = 'block'
-        }
-        if(foutChecker == 56){
-            sixth.style.display = 'none';
-            seventh.style.display = 'block'
-        }
-        if(foutChecker == 64){
-            seventh.style.display = 'none';
-            eighth.style.display = 'block'
-        }
-        if(foutChecker == 72){
-            eighth.style.display = 'none';
-            ninth.style.display = 'block'
+        if(foutChecker == 9){
+            hangman.setAttribute('src', 'img/9.png');
         }  
 // dit zorgt voor de display van het hangmannetje
-    }
-    if(foutChecker == 72){
+    if(foutChecker == 9){
         foutCheckBoolean = false;
     }
 //hierdoor wordt het spel gestopt na 9 pogingen 
