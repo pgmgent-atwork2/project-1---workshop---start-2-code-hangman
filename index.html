@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
-    <div>
-        <label for="inpu">Vul hier u guesse in!</label>
-        <input type="text" name="myInput" id="input">
-        <button id="refresh">speel opnieuw</button>
+    <main>
+        <div class="text__contain">
+            <label for="inpu">Vul hier u guesse in!</label>
+            <input type="text" name="myInput" id="input">
+            <button id="refresh">speel opnieuw</button>
+        </div>
         <div class="hangman"> 
             <div class="hangman__parts"> 
                 <img id="hangman" src="img/0.png" alt="first wrong"> 
@@ -23,6 +25,6 @@
         <h3>Used letters</h3>
         <p id="lettersToDisplay"></p>
         <script src="javascript/main.js"></script>
-    </div>
+    </main>
 </body>
 </html>
