@@ -27,8 +27,9 @@ let input;
 let foutChecker = 0;
 let foutCheckBoolean = true;
 let solution = [];
+let guessesArray = [];
 //bepaalde variable die we nodig hebben 
-const randomInt = Math.floor(Math.random() * words.length+1);
+const randomInt = Math.floor(Math.random() * words.length);
 const wordToGuess = words[randomInt].toLowerCase();
 const wordToGuessArray = wordToGuess.split('');
 //dit zorgt er voor dat er eeb random woord gekozen word uit de array en dat dit naar kleine leters omgezet wordt
@@ -51,6 +52,7 @@ for(let j = 0; j < wordToGuess.length; j++ ){
 start.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
       input = document.getElementById('input').value;
+      guessesArray.push(input);
       if(foutCheckBoolean){
         playGame()
       }else{
@@ -112,9 +114,14 @@ function playGame(){
         foutCheckBoolean = false;
     }
 //hierdoor wordt het spel gestopt na 9 pogingen 
-let displayWord = solution.join()
-const display = document.getElementById('wordToDisplay');
-display.textContent = displayWord;
+let wordToDisplay= solution.join()
+let guesses = guessesArray.join();
+const displayLeters = document.getElementById('lettersToDisplay');
+const displayWord = document.getElementById('wordToDisplay');
+guesses = guesses.replace(/,/g, " ");
+wordToDisplay = wordToDisplay.replace(/,/g, "-");
+displayWord.textContent = wordToDisplay;
+displayLeters.textContent = guesses;
 }
 // dit is het verloop van het spel 
 
