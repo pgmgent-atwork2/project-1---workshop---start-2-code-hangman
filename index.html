@@ -4,38 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
-    <div class="hangman">
-        <div  class="hangman__parts">
-            <img src="img/1.png" alt="first wrong">
+    <label for="inpu">Vul hier u guesse in!</label>
+    <input type="text" name="myInput" id="input">
+    <div class="hangman"> 
+        <div id="hangman1" class="hangman__parts"> 
+            <img src="img/1.png" alt="first wrong"> 
+        </div> 
+        <div id="hangman2" class="hangman__parts"> 
+            <img src="img/2.png" alt="second wrong"> 
+        </div> 
+        <div id="hangman3" class="hangman__parts"> 
+            <img src="img/3.png" alt="third wrong"> 
+        </div> 
+        <div id="hangman4" class="hangman__parts"> 
+            <img src="img/4.png" alt="fourth wrong"> 
+        </div> 
+        <div id="hangman5" class="hangman__parts"> 
+            <img src="img/5.png" alt="fifth wrong"> 
+        </div> 
+        <div id="hangman6" class="hangman__parts"> 
+            <img src="img/6.png" alt="sixth wrong"> 
+        </div> 
+        <div id="hangman7" class="hangman__parts"> 
+            <img src="img/7.png" alt="seventh wrong"> 
+        </div> <div id="hangman8" class="hangman__parts"> 
+            <img src="img/8.png" alt="eight worng"> 
+        </div> 
+        <div id="hangman9" class="hangman__parts"> 
+            <img src="img/9.png" alt="ninth wrong"> 
         </div>
-        <div class="hangman__parts">
-            <img src="img/2.png" alt="second wrong">
-        </div>
-        <div class="hangman__parts">
-            <img src="img/3.png" alt="third wrong">
-        </div>
-        <div class="hangman__parts">
-            <img src="img/4.png" alt="fourth wrong">
-        </div>
-        <div class="hangman__parts">
-            <img src="img/5.png" alt="fifth wrong">
-        </div>
-        <div class="hangman__parts">
-            <img src="img/6.png" alt="sixth wrong">
-        </div>
-        <div class="hangman__parts">
-            <img src="img/7.png" alt="seventh wrong">
-        </div>
-        <div class="hangman__parts">
-            <img src="img/8.png" alt="eight worng">
-        </div>
-        <div class="hangman__parts">
-            <img src="img/9.png" alt="ninth wrong">
-        </div>
-</div>
+    </div>
+    <h2 id="wordToDisplay"></h2>
+    <h3>Used letters</h3>
+    <p id="lettersToDisplay"></p>
+    <script src="javascript/main.js"></script>
 </body>
 </html>

@@ -1,7 +1,14 @@
-.hangman img{
-    width: 80%;
+.hangman img{ 
+    width: 50%;
+} 
+.hangman__parts{ 
+    display: none; 
 }
 
-.hangman__parts{
-    display: none;
+body{
+    background-image: radial-gradient(circle at 20% 28.99%, #d1ffff 0, #b3f4fe 12.5%, #8fe5f8 25%, #63d4f2 37.5%, #0cc1ed 50%, #00aee9 62.5%, #009ce6 75%, #008be3 87.5%, #007bdf 100%);
+}
+
+input{
+    border: .0625rem solid darkblue;
 }
