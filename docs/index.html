@@ -19,7 +19,7 @@
                 <p>Dit is een klein tutorial om te leren programmeren. Bij deze tutorial gaan we proberen het spelletje hangman na te maken.</p>
                 <img src="img/front-end_hangman.png" alt="screen van het te maken spel">
             </div>
-            <section class="opstart">
+            <div class="opstart">
                 <h2>Mappen structuur</h2>
                 <ol style="color: white;">
                     <li><p> Download eerst de bron map</p></li>
@@ -31,33 +31,54 @@
                         <img src="img/folderstructuur.PNG" alt="foto folderstructuur">
                     </li>
                     <li>
-                        <p>Installeer de live server extensie in Visual Studio Code</p>
+                        <p>Installeer de live server extensie in VS Code</p>
                         <img src="img/lifeserver.PNG" alt="foto instalatie lifeserver">
                     </li>
                     <li>
-                        <p>Start nu de lifeserver. Dit doe je door op Go Live te klikken onderaan in je VS Code </p>
+                        <p>Start de live server. Dit doe je door op Go Live te klikken onderaan bij je VS Code </p>
                         <img src="img/goLive.png" alt="Go Live">
                     </li>
                 </ol>
                 
-            </section>
-            <section class="code">
-                <h2>Start met coderen!</h2>
+            </div>
+            <div class="code">
+                <h2>Starten met coderen!</h2>
                 <h3>HTML</h3>
-                <p>Copieer onderstaande code en plaats deze in de root van je werkfolder met als naam <span class="strong">index.html</span>. Dit is de code om de visuele aspecten op de site weer te geven.</p>
-                <iframe width="100%" height="300" src="//jsfiddle.net/Minluv7/sbyx05p6/2/embedded/html/dark/?bodyColor=black&fontColor=green" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                <p> Kopieer de onderstaande code en plaats deze code in je <strong>index.html</strong>  file</p>
+                <iframe width="100%" height="300" src="//jsfiddle.net/Minluv7/0ex35rv8/1/embedded/html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                 <h3>CSS</h3>
-                <p>Copieer opnieuw de onderstaande code maar plaats deze nu in het mapje css met als naam <span class="strong">main.css</span>. Deze code zal de website stylen (opmaak van de site).</p>
+                <p> Vervolgens ga je deze css kopieren en plaatsen in je <strong>main.css</strong>  file. </p>
                 <iframe width="100%" height="300" src="//jsfiddle.net/Minluv7/sbyx05p6/2/embedded/css/dark/?bodyColor=black&fontColor=green" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
-                <p>Kijk nu of je het zelfde hebt op de geopende browser als onderstaande foto.</p>
-                <img src="img/front-end_hangman.png" alt="foto look webapplication">
+                <h3>HTML</h3>
+                <p>Verder koppel je je <strong>main.css</strong> met je <strong>index.html</strong></p>
+                <p>Dit doe je door het volgende code te schrijven onder je &lt;title>Document&lt;/title> </p>
+                <ul class="css__list">
+                    <li> &lt;link rel="stylesheet" href="css/main.css"></li>
+                    <li> &lt;link rel="stylesheet" href="css/reset.css"></li>
+                </ul>
+                <p>Vergeet niet de code tussen de body in je html te koppiëren! </p>
+                <iframe width="100%" height="300" src="//jsfiddle.net/Minluv7/qmxez4Ln/7/embedded/html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                <p>Vervolgens zou dit je voorlopige resultaat zijn in je live server</p>
+                <iframe width="100%" height="300" src="//jsfiddle.net/Minluv7/qmxez4Ln/7/embedded/result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                
                 <h3>JavaScript</h3>
-                <p>Copieer onderstaande code in de javascript follder en geef het de naam <span class="strong">main.js</span>. Dit zorgt voor de functionalitijd van de webapplication.</p>              
-                <iframe width="100%" height="300" src="//jsfiddle.net/Minluv7/sbyx05p6/2/embedded/js/dark/?bodyColor=black&fontColor=green" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
-                <h3>Proficiat je hebt nu je eerste werkend webapplication!!!</h3>
-            </section>
+                <p>Tijd om echt te coderen met JavaScript!</p>
+                <p>We zullen eerst beginnen met onze javascript file <strong>main.js</strong> te koppelen met de <strong>index.html</strong></p>
+                <p>Dit doen we door de volgende code te plaatsen in de body van je <strong>index.html</strong></p>
+                <p> &lt;script src="javascript/main.js"></script></p>
+                <p>vervolgens koppieer de array met de woord strings dit zorgt ervoor dat je de woorden gaan renderen die je wilt gebruiken in je spel. Tip: je kan ook zelf een string met array maken. </p> 
+                <p>Daarna schrijf je de volgende code in je <strong>main.js</strong></p>
+                <iframe width="100%" height="300" src="//jsfiddle.net/Minluv7/sbyx05p6/4/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+                <p>Dit zou het eind resultaat moeten zijn.  </p>
+
+                <iframe width="100%" height="300" src="//jsfiddle.net/Minluv7/sbyx05p6/4/embedded/result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                <h3>Test nu zelf je werkende website!!!!</h3>
+            </div>
         </div>
     </main>
+
+    
     
 </body>
 
