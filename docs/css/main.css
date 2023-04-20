@@ -1,7 +1,12 @@
-nav {
-    text-align: center;
-    /*background-color: hsl(0, 24%, 93%);*/
+header {
     padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img{
+    width: 5rem;
 }
 
 h1 {
@@ -30,21 +35,24 @@ h2 {
     margin: 0;
 }
 
+ol li {
+    line-height: 2rem;
+}
+
+ol li img{
+    margin-bottom: 1rem;
+}
+
 .container {
     max-width: 60rem;
     margin: auto;
 }
 
-img {
-    max-width: 58rem;
-    margin: 1rem auto;
-}
-
 p, a {
-    color: hsl(191, 100%, 50%);
-    font-size: 1.5rem;
+    color: white;
+
     font-family: sans-serif;
-    line-height: 1.5;
+    
     font-weight: 300;
 }
 
