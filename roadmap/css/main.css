@@ -1,0 +1,57 @@
+nav {
+    text-align: center;
+    /*background-color: hsl(0, 24%, 93%);*/
+    padding: 0.5rem 0;
+}
+
+h1 {
+    color: hsl(180, 3%, 6%);
+    font-size: 3rem;
+    font-family: sans-serif;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+main {
+    background: linear-gradient(to bottom, hsl(210, 100%, 15%), hsl(209, 100%, 28%));
+}
+
+h2, h3 {
+    color: hsl(0, 24%, 93%);
+    font-size: 2rem;
+    font-family: sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+h2 {
+    padding: 1rem 0 0 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 60rem;
+    margin: auto;
+}
+
+img {
+    max-width: 58rem;
+    margin: 1rem auto;
+}
+
+p, a {
+    color: hsl(191, 100%, 50%);
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+a:hover {
+    color: hsl(0, 24%, 93%);
+}
+
+.strong {
+    color: hsl(0, 24%, 93%);
+}
