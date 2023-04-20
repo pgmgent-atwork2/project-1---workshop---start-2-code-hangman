@@ -101,7 +101,7 @@ const words = [
     "Heritage"
   ];
 
-//bepaalde variable die we nodig hebben 
+//bepaalde variable die we nodig hebben in het verloop van de application
 let place;
 let input;
 let foutChecker = 0;
@@ -109,28 +109,31 @@ let foutCheckBoolean = true;
 let solution = [];
 let guessesArray = [];
 
-//dit zorgt er voor dat er een random woord gekozen word uit de array en dat dit naar kleine letters omgezet wordt
-//ook vervangt je de string naar een array om zo de plaats van de letters te bepalen 
+//dit zorgt er voor dat er eeb random woord gekozen word uit de array en dat dit naar kleine leters omgezet wordt
+//ook vervangt je de string naaar een array om zo de plaats van de letters te bepalen 
 const randomInt = Math.floor(Math.random() * words.length);
 const wordToGuess = words[randomInt].toLowerCase();
 const wordToGuessArray = wordToGuess.split('');
 
-//hierbij haal je informatie op van de html in een id en om deze later in het programma aantepassen met js
+//hierbij haal je informatie op van de site om deze later in het programma aantepassen 
 const start = document.getElementById('input');
 const hangman = document.getElementById('hangman');
 const refresh = document.getElementById('refresh');
+const displayLeters = document.getElementById('lettersToDisplay');
+const displayWord = document.getElementById('wordToDisplay');
 
 //dit genereed de solution array om je woord mee te makken 
 for(let j = 0; j < wordToGuess.length; j++ ){
     solution.push('');
 }
 
-//deze zorgt ervoor om het spel opnieuw te spellen
+//dit is om het spel opnieuw te kunnen spellen
 refresh.addEventListener("click", function(){
     location.reload();
 })
 
-//hierbij start je het spel door op enter te klikken en stopt het met spelen na 9 pogingen. Bij het herladen van de pagina kan je opnieuw spelen.
+//hierbij start je het spel door op enter te duwen en stopt hij met spelen na 9 pogingen. 
+//Alleen bij het herladen van de pagina kan je dan opnieuw spelen
 start.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
       input = document.getElementById('input').value;
@@ -143,7 +146,7 @@ start.addEventListener("keydown", function(event) {
     }
 });
 
-//hierbij wordt er gekeken of de letter aanwezig is in het woord dat geraden moet worden enof het juist is ingevuld 
+//hierbij wordt gekeken of de letter aanwezig is in het te raden woord en als het juist is ingevuld 
 function playGame(){
     for(let i = 0; i < wordToGuess.length; i++){
         if(wordToGuessArray[i] == input){
@@ -157,7 +160,7 @@ function playGame(){
      foutChecker = foutChecker+1;
     }  
 
-    // dit zorgt voor dat de juiste afbeelding wordt getoond van het hangmannetje
+// dit zorgt voor de display van het hangmannetje
 console.log(hangman)
         if(foutChecker == 1){
             hangman.setAttribute('src', 'img/1.png');
@@ -192,13 +195,19 @@ console.log(hangman)
         foutCheckBoolean = false;
     }
 
-// dit is het verloop van het spel 
+//dit zorgt er voor dat de array van alle geprobeerde leters en jouw oplossing in een string terecht komen.
 let wordToDisplay= solution.join()
 let guesses = guessesArray.join();
-const displayLeters = document.getElementById('lettersToDisplay');
-const displayWord = document.getElementById('wordToDisplay');
+
+//zorgt er voor dat de strings mooier op het scherm komen
 guesses = guesses.replace(/,/g, " ");
-wordToDisplay = wordToDisplay.replace(/,/g, "-");
+wordToDisplay = wordToDisplay.replace(/,/g, "_");
+
+//hierbij worden de stings op het scherm gedisplayed
 displayWord.textContent = wordToDisplay;
 displayLeters.textContent = guesses;
 }
+
+//als je het niet geraden hebt kan je hier het woord met inspect terug vinden 
+console.log(wordToGuess)
+
